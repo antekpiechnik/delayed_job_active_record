@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rake'
 
+gem 'activesupport', '>= 4.0'
+gem 'activerecord',  '>= 4.0'
+gem 'delayed_job',   :git => 'https://github.com/collectiveidea/delayed_job.git'
+
+
 group :test do
   platforms :jruby do
     gem 'activerecord-jdbcmysql-adapter'
@@ -24,5 +29,3 @@ group :test do
   gem 'rspec', '>= 2.11'
   gem 'simplecov', :require => false
 end
-
-gemspec
